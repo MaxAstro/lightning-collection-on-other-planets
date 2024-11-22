@@ -1,15 +1,14 @@
 {
-  "name": "scrap-reprocessor",
-  "version": "1.0.1",
-  "title": "Scrap Reprocessor",
+  "name": "lightning-collection-on-other-planets",
+  "version": "0.1.0",
+  "title": "LCoop: Lightning Collection on other Planets",
   "author": "MaxAstro",
   "factorio_version": "2.0",
   "dependencies": [
-    "base >= 2.0.20",
-    "space-age",
-    "quality"
+    "base >= 2.0",
+    "space-age"
   ],
-  "description": "Adds a powerful new processing chain for scrap as a Fulgora science reward.",
+  "description": "Allows lightning collectors (not lightning rods) to function on planets other than Fulgora, by giving lightning a chance to spawn around them at night.",
   "package": {
     "git_publish_branch": "main",
     "sync_portal_details": true
