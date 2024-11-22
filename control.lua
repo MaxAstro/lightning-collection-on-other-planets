@@ -61,7 +61,10 @@ function do_lightning_check(event)
                         player.remove_alert{entity = lightning_collector, message = "lcoop-custom-alerts.lcoop-too-clustered-alert"}
                     end
                     local tick_rate = settings.global["lcoop-check-frequency-setting"].value      --[[@as integer]]
-                    local base_chance = 0.02 * tick_rate / 60                -- Base chance of lightning is 2% per second, regardless of check frequency
+                    local base_chance = 0.1 * tick_rate / 60                -- Base chance of lightning is 10% per second, regardless of check frequency
+                                                                            -- On Nauvis, this means that a normal quality lightning collector will average two strikes per night
+                                                                            -- A legendary quality collector will average around seven strikes per night
+                    base_chance = base_chance + 1                           -- Debug code
                     if math.random() <= base_chance and lightning_chance(range, magnetic_field) then
                         local lightning_x = lightning_collector.position.x - 2 + math.random(4)   -- Slightly randomize the lightning location for visual variety
                         local lightning_y = lightning_collector.position.y - 2 + math.random(4)
